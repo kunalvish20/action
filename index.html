@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="DTRX Figure — Premium futuristic action figures, anime, superhero & collector drops." />
+  <title>DTRX Figure — Premium Action Figures & Collectibles</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+
+  <!-- ===== ANNOUNCEMENT BAR ===== -->
+  <div class="announcement-bar">
+    <div class="announcement-track">
+      <span><i class="fa-solid fa-bolt"></i> FREE SHIPPING ON ORDERS OVER ₹5,000</span>
+      <span><i class="fa-solid fa-fire"></i> NEW DROPS EVERY FRIDAY</span>
+      <span><i class="fa-solid fa-shield-halved"></i> 100% AUTHENTIC COLLECTIBLES</span>
+      <span><i class="fa-solid fa-bolt"></i> FREE SHIPPING ON ORDERS OVER ₹5,000</span>
+      <span><i class="fa-solid fa-fire"></i> NEW DROPS EVERY FRIDAY</span>
+      <span><i class="fa-solid fa-shield-halved"></i> 100% AUTHENTIC COLLECTIBLES</span>
+    </div>
+  </div>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <a href="#" class="logo">
+        <span class="logo-mark">D</span>
+        <span class="logo-text">DTRX<span class="dot">.</span></span>
+      </a>
+
+      <nav class="nav-desktop">
+        <a href="#" class="nav-link">New Drops</a>
+        <a href="#" class="nav-link">Anime</a>
+        <a href="#" class="nav-link">Superhero</a>
+        <a href="#" class="nav-link">Gaming</a>
+        <a href="#" class="nav-link">Limited</a>
+        <a href="#" class="nav-link">Sale <span class="badge-hot">HOT</span></a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <button class="icon-btn" aria-label="Wishlist">
+          <i class="fa-regular fa-heart"></i>
+          <span class="count" id="wishlistCount">0</span>
+        </button>
+        <button class="icon-btn cart-btn" aria-label="Cart">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="count" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Search bar slide -->
+    <div class="search-bar" id="searchBar">
+      <div class="search-bar-inner">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search figures, anime, superheroes..." />
+        <button class="search-close" id="searchClose"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== MOBILE MENU ===== -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <a href="#" class="logo">
+        <span class="logo-mark">D</span>
+        <span class="logo-text">DTRX<span class="dot">.</span></span>
+      </a>
+      <button class="close-btn" id="closeMenu"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="#"><span><i class="fa-solid fa-bolt"></i> New Drops</span><i class="fa-solid fa-chevron-right"></i></a>
+      <a href="#"><span><i class="fa-solid fa-star"></i> Anime</span><i class="fa-solid fa-chevron-right"></i></a>
+      <a href="#"><span><i class="fa-solid fa-mask"></i> Superhero</span><i class="fa-solid fa-chevron-right"></i></a>
+      <a href="#"><span><i class="fa-solid fa-gamepad"></i> Gaming</span><i class="fa-solid fa-chevron-right"></i></a>
+      <a href="#"><span><i class="fa-solid fa-robot"></i> Mecha & Robots</span><i class="fa-solid fa-chevron-right"></i></a>
+      <a href="#"><span><i class="fa-solid fa-gem"></i> Limited Editions</span><i class="fa-solid fa-chevron-right"></i></a>
+      <a href="#" class="sale-link"><span><i class="fa-solid fa-fire"></i> Sale</span><span class="badge-hot">HOT</span></a>
+    </nav>
+    <div class="mobile-menu-footer">
+      <button class="btn-primary"><i class="fa-solid fa-user"></i> Login / Sign Up</button>
+      <div class="social-row">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#"><i class="fa-brands fa-discord"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="overlay" id="overlay"></div>
+
+  <!-- ===== HERO PROGRESS BAR ===== -->
+  <div class="hero-progress" id="heroProgress">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- ===== HERO SLIDER ===== -->
+  <section class="hero">
+    <div class="hero-slider" id="heroSlider">
+
+      <div class="hero-slide active" style="--bg:url('https://images.unsplash.com/photo-1775954966682-3719ad9a56cd?crop=entropy&cs=srgb&fm=jpg&q=85&w=1600')">
+        <div class="hero-content">
+          <span class="hero-tag"><i class="fa-solid fa-bolt"></i> NEW DROP — VOL. 07</span>
+          <h1 class="hero-title">UNLEASH<br><span class="accent">THE LEGENDS</span></h1>
+          <p class="hero-sub">Premium 1/6 scale collector figures crafted for the elite. Limited stock. Built to dominate your shelf.</p>
+          <div class="hero-cta">
+            <a href="#" class="btn-primary">Shop Now <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="#" class="btn-ghost">View Drops</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-slide" style="--bg:url('https://images.unsplash.com/photo-1608889175123-8ee362201f81?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')">
+        <div class="hero-content">
+          <span class="hero-tag"><i class="fa-solid fa-fire"></i> ANIME COLLECTION</span>
+          <h1 class="hero-title">ANIME<br><span class="accent">REIMAGINED</span></h1>
+          <p class="hero-sub">From Shonen icons to Mecha titans — own the figures that define a generation.</p>
+          <div class="hero-cta">
+            <a href="#" class="btn-primary">Explore <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="#" class="btn-ghost">View Drops</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-slide" style="--bg:url('https://images.unsplash.com/photo-1775954966682-3719ad9a56cd?crop=entropy&cs=srgb&fm=jpg&q=85&w=1600')">
+        <div class="hero-content">
+          <span class="hero-tag"><i class="fa-solid fa-gem"></i> LIMITED EDITION</span>
+          <h1 class="hero-title">COLLECTOR<br><span class="accent">GRADE ONLY</span></h1>
+          <p class="hero-sub">Numbered, certified, and built for true collectors. Only 500 made worldwide.</p>
+          <div class="hero-cta">
+            <a href="#" class="btn-primary">Pre-Order <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="#" class="btn-ghost">View Drops</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="slider-dots" id="heroDots"></div>
+  </section>
+
+  <!-- ===== CATEGORY STRIP ===== -->
+  <section class="cat-strip-wrap">
+    <button class="strip-arrow left" id="stripLeft"><i class="fa-solid fa-chevron-left"></i></button>
+    <button class="strip-arrow right" id="stripRight"><i class="fa-solid fa-chevron-right"></i></button>
+
+    <div class="cat-strip" id="catStrip">
+      <a href="#" class="cat-card">
+        <div class="cat-img"><img src="https://images.pexels.com/photos/34956928/pexels-photo-34956928.jpeg?auto=compress&cs=tinysrgb&w=150" alt="" /></div>
+        <span class="cat-label">New Drop</span>
+      </a>
+      <a href="#" class="cat-card">
+        <div class="cat-img"><img src="https://images.pexels.com/photos/32112226/pexels-photo-32112226.jpeg?auto=compress&cs=tinysrgb&w=150" alt="" /></div>
+        <span class="cat-label">Anime</span>
+      </a>
+      <a href="#" class="cat-card">
+        <div class="cat-img"><img src="https://images.pexels.com/photos/13194386/pexels-photo-13194386.png?auto=compress&cs=tinysrgb&w=150" alt="" /></div>
+        <span class="cat-label">Superhero</span>
+      </a>
+      <a href="#" class="cat-card">
+        <div class="cat-img"><img src="https://images.pexels.com/photos/35261743/pexels-photo-35261743.jpeg?auto=compress&cs=tinysrgb&w=150" alt="" /></div>
+        <span class="cat-label">Gaming</span>
+      </a>
+      <a href="#" class="cat-card">
+        <div class="cat-img"><img src="https://images.pexels.com/photos/20483988/pexels-photo-20483988.jpeg?auto=compress&cs=tinysrgb&w=150" alt="" /></div>
+        <span class="cat-label">Mecha</span>
+      </a>
+      <a href="#" class="cat-card">
+        <div class="cat-img"><img src="https://images.pexels.com/photos/34956928/pexels-photo-34956928.jpeg?auto=compress&cs=tinysrgb&w=150" alt="" /></div>
+        <span class="cat-label">Limited</span>
+      </a>
+      <a href="#" class="cat-card">
+        <div class="cat-img"><img src="https://images.pexels.com/photos/32112226/pexels-photo-32112226.jpeg?auto=compress&cs=tinysrgb&w=150" alt="" /></div>
+        <span class="cat-label">Movie</span>
+      </a>
+      <a href="#" class="cat-card">
+        <div class="cat-img"><img src="https://images.pexels.com/photos/13194386/pexels-photo-13194386.png?auto=compress&cs=tinysrgb&w=150" alt="" /></div>
+        <span class="cat-label">Robots</span>
+      </a>
+      <a href="#" class="cat-card">
+        <div class="cat-img"><img src="https://images.pexels.com/photos/34956928/pexels-photo-34956928.jpeg?auto=compress&cs=tinysrgb&w=150" alt="" /></div>
+        <span class="cat-label">Manga</span>
+      </a>
+      <a href="#" class="cat-card">
+        <div class="cat-img"><img src="https://images.pexels.com/photos/13194386/pexels-photo-13194386.png?auto=compress&cs=tinysrgb&w=150" alt="" /></div>
+        <span class="cat-label">Sci-Fi</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== PRODUCTS — TRENDING DROPS ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow"><i class="fa-solid fa-fire"></i> Trending Now</span>
+          <h2 class="section-title">Hot Drops This Week</h2>
+        </div>
+        <a href="#" class="view-all">View All <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <div class="product-grid">
+        <!-- Card 1 -->
+        <article class="product-card">
+          <div class="ribbon">LIMITED</div>
+          <button class="wishlist-btn" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1776736851933-4a2ece025ec5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y3liZXIlMjBzYW11cmFpJTIwYWN0aW9uJTIwZmlndXJlfGVufDB8fDB8fHww" alt="Cyber Samurai" />
+          </div>
+          <div class="product-info">
+            <div class="rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <span>(248)</span>
+            </div>
+            <h3 class="product-name">Cyber Samurai X-01</h3>
+            <div class="price-row">
+              <span class="price">₹15,999</span>
+              <span class="price-old">₹19,999</span>
+            </div>
+            <button class="add-cart-btn"><i class="fa-solid fa-bag-shopping"></i> Add to Cart</button>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="product-card">
+          <div class="ribbon hot">HOT DROP</div>
+          <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1695244345316-975931c838fe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8U2hhZG93JTIwTmluamElMjBhY3Rpb24lMjBmaWd1cmV8ZW58MHx8MHx8fDA%3D" />
+          </div>
+          <div class="product-info">
+            <div class="rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+              <span>(192)</span>
+            </div>
+            <h3 class="product-name">Shadow Ninja Elite</h3>
+            <div class="price-row">
+              <span class="price">₹13,999</span>
+              <span class="price-old">₹17,999</span>
+            </div>
+            <button class="add-cart-btn"><i class="fa-solid fa-bag-shopping"></i> Add to Cart</button>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="product-card">
+          <div class="ribbon new">NEW</div>
+          <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1635805737707-575885ab0820?w=600&q=80" alt="Hero Warrior" />
+          </div>
+          <div class="product-info">
+            <div class="rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <span>(312)</span>
+            </div>
+            <h3 class="product-name">Titan Hero Warrior</h3>
+            <div class="price-row">
+              <span class="price">₹16,999</span>
+              <span class="price-old">₹19,999</span>
+            </div>
+            <button class="add-cart-btn"><i class="fa-solid fa-bag-shopping"></i> Add to Cart</button>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="product-card">
+          <div class="ribbon collector">COLLECTOR</div>
+          <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1710923697054-70bc1953425c?crop=entropy&cs=srgb&fm=jpg&q=85&w=600" alt="Mecha Beast" />
+          </div>
+          <div class="product-info">
+            <div class="rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+              <span>(178)</span>
+            </div>
+            <h3 class="product-name">Mecha Beast MK-IV</h3>
+            <div class="price-row">
+              <span class="price">₹19,999</span>
+              <span class="price-old">₹24,999</span>
+            </div>
+            <button class="add-cart-btn"><i class="fa-solid fa-bag-shopping"></i> Add to Cart</button>
+          </div>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="product-card">
+          <div class="ribbon">LIMITED</div>
+          <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1589673977628-3479c4f81c4e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fEdhbGF4eSUyMFRyb29wZXIlMjBhY3Rpb24lMjBmaWd1cmV8ZW58MHx8MHx8fDA%3D" alt="Galaxy Trooper" />
+          </div>
+          <div class="product-info">
+            <div class="rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <span>(421)</span>
+            </div>
+            <h3 class="product-name">Galaxy Trooper Z9</h3>
+            <div class="price-row">
+              <span class="price">₹13,999</span>
+              <span class="price-old">₹17,999</span>
+            </div>
+            <button class="add-cart-btn"><i class="fa-solid fa-bag-shopping"></i> Add to Cart</button>
+          </div>
+        </article>
+
+        <!-- Card 6 -->
+        <article class="product-card">
+          <div class="ribbon hot">HOT DROP</div>
+          <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1633957897986-70e83293f3ff?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8U2VudGluZWwlMjBCb3QlMjBWMnxlbnwwfHwwfHx8MA%3D%3D" alt="Robot Sentinel" />
+          </div>
+          <div class="product-info">
+            <div class="rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <span>(287)</span>
+            </div>
+            <h3 class="product-name">Sentinel Bot V2</h3>
+            <div class="price-row">
+              <span class="price">₹17,999</span>
+              <span class="price-old">₹21,999</span>
+            </div>
+            <button class="add-cart-btn"><i class="fa-solid fa-bag-shopping"></i> Add to Cart</button>
+          </div>
+        </article>
+
+        <!-- Card 7 -->
+        <article class="product-card">
+          <div class="ribbon new">NEW</div>
+          <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80" alt="Phantom Knight" />
+          </div>
+          <div class="product-info">
+            <div class="rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+              <span>(165)</span>
+            </div>
+            <h3 class="product-name">Phantom Knight</h3>
+            <div class="price-row">
+              <span class="price">₹14,999</span>
+              <span class="price-old">₹18,999</span>
+            </div>
+            <button class="add-cart-btn"><i class="fa-solid fa-bag-shopping"></i> Add to Cart</button>
+          </div>
+        </article>
+
+        <!-- Card 8 -->
+        <article class="product-card">
+          <div class="ribbon collector">COLLECTOR</div>
+          <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1531259683007-016a7b628fc3?w=600&q=80" alt="Dragon Lord" />
+          </div>
+          <div class="product-info">
+            <div class="rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <span>(503)</span>
+            </div>
+            <h3 class="product-name">Dragon Lord Ultra</h3>
+            <div class="price-row">
+              <span class="price">₹19,999</span>
+              <span class="price-old">₹24,999</span>
+            </div>
+            <button class="add-cart-btn"><i class="fa-solid fa-bag-shopping"></i> Add to Cart</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PREMIUM ZOOM ===== -->
+  <section class="premium-zoom-section">
+    <div class="premium-zoom-sticky">
+      <div class="premium-zoom-card">
+        <img
+          src="https://images.unsplash.com/photo-1768268768362-00b5c53bd273?w=1200&auto=format&fit=crop&q=80"
+          alt="Premium Image"
+        >
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SHOP BY CATEGORY ===== -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow"><i class="fa-solid fa-grid-2"></i> Categories</span>
+        <h2 class="section-title">Shop By Category</h2>
+        <p class="section-sub">Find your fandom. From anime icons to mecha titans.</p>
+      </div>
+
+      <div class="cat-grid">
+        <a href="#" class="cat-box" style="--img:url('https://images.unsplash.com/photo-1584520762425-4e6c9a8bb704?crop=entropy&cs=srgb&fm=jpg&q=85&w=600')">
+          <div class="cat-box-content">
+            <h3>Anime Figures</h3>
+            <span>Explore <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </a>
+        <a href="#" class="cat-box" style="--img:url('https://images.unsplash.com/photo-1635805737707-575885ab0820?w=800&q=80')">
+          <div class="cat-box-content">
+            <h3>Superhero Figures</h3>
+            <span>Explore <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </a>
+        <a href="#" class="cat-box" style="--img:url('https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=800&q=80')">
+          <div class="cat-box-content">
+            <h3>Gaming Characters</h3>
+            <span>Explore <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </a>
+        <a href="#" class="cat-box" style="--img:url('https://images.unsplash.com/photo-1608889476561-6242cfdbf622?w=800&q=80')">
+          <div class="cat-box-content">
+            <h3>Movie Collectibles</h3>
+            <span>Explore <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </a>
+        <a href="#" class="cat-box" style="--img:url('https://images.unsplash.com/photo-1710923697054-70bc1953425c?crop=entropy&cs=srgb&fm=jpg&q=85&w=600')">
+          <div class="cat-box-content">
+            <h3>Robots & Mecha</h3>
+            <span>Explore <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </a>
+        <a href="#" class="cat-box" style="--img:url('https://imgs.search.brave.com/qs0e-PwSmmFNtAhHMGZxgp0ffbZXOL-8PyVb0ReltjM/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9rYXRh/bmEtY29ycC5jb20v/Y2RuL3Nob3AvZmls/ZXMvdGFuamlyb19r/YXRhbmFfZGVtb25f/c2xheWVyXzMuanBn/P3Y9MTc1MTkxMTAw/MiZ3aWR0aD0xNTAw')">
+          <div class="cat-box-content">
+            <h3>Limited Editions</h3>
+            <span>Explore <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NEW ARRIVALS ===== -->
+  <section class="new-arrivals-section">
+    <div class="new-arrivals-wrap">
+      <h2 class="new-arrivals-title">NEW ARRIVALS</h2>
+
+      <div class="na-slider">
+        <button class="na-nav na-prev" onclick="moveNASlide(-1)">&#10094;</button>
+
+        <div class="na-window">
+          <div class="na-track" id="naTrack">
+            <div class="na-card">
+              <div class="na-img-box">
+                <img src="https://i0.wp.com/bigfanmerch.com/wp-content/uploads/2025/12/EXG-Pro-Anti-Venom-Cable-Guys-Controller-Holder-and-Phone-Stand-BigFan-Merch-4.webp" alt="Anti Venom">
+              </div>
+              <h4>Anti Venom Cable Guys Controller Holder and Phone Stand</h4>
+              <div class="na-price">
+                <span class="new">₹2,390</span>
+                <span class="old">₹2,499</span>
+              </div>
+            </div>
+
+            <div class="na-card">
+              <div class="na-img-box">
+                <img src="https://i0.wp.com/bigfanmerch.com/wp-content/uploads/2025/12/EXG-Pro-Venom-Cable-Guys-Controller-Holder-and-Phone-Stand-BigFan-Merch-2.webp" alt="Venom">
+              </div>
+              <h4>Venom Cable Guys Controller Holder and Phone Stand</h4>
+              <div class="na-price">
+                <span class="new">₹2,390</span>
+                <span class="old">₹2,499</span>
+              </div>
+            </div>
+
+            <div class="na-card">
+              <div class="na-img-box">
+                <img src="https://i0.wp.com/bigfanmerch.com/wp-content/uploads/2025/12/EXG-Pro-Lt-Simon-Ghost-Riley-Controller-Holder-and-Phone-Stand%E2%80%93Call-of-Duty-BigFan-Merch.webp" alt="Ghost Riley">
+              </div>
+              <h4>Call of Duty Ghost Riley Controller Holder and Phone Stand</h4>
+              <div class="na-price">
+                <span class="new">₹2,190</span>
+                <span class="old">₹2,499</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="na-nav na-next" onclick="moveNASlide(1)">&#10095;</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURED LIMITED EDITION BANNER ===== -->
+  <section class="featured-banner">
+    <div class="container">
+      <div class="featured-inner">
+        <div class="featured-text">
+          <span class="eyebrow"><i class="fa-solid fa-gem"></i> Limited Edition</span>
+          <h2>The Apex Collector Series</h2>
+          <p>Hand-numbered. Certificate of authenticity. Only <strong>500 worldwide</strong>. When they're gone, they're gone forever.</p>
+          <div class="featured-stats">
+            <div><strong>1/6</strong><span>Scale</span></div>
+            <div><strong>500</strong><span>Made</span></div>
+            <div><strong>32+</strong><span>Articulations</span></div>
+          </div>
+          <a href="#" class="btn-primary">Pre-Order Now <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="featured-img">
+          <img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=900&q=80" alt="Apex Collector" />
+          <div class="glow-orb"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FLASH SALE COUNTDOWN ===== -->
+  <section class="flash-sale">
+    <div class="container">
+      <div class="flash-inner">
+        <div class="flash-left">
+          <span class="flash-tag"><i class="fa-solid fa-bolt"></i> Flash Sale</span>
+          <h2>Up to 50% OFF Ends Soon</h2>
+          <p>Mega drop sale on hand-picked figures. Limited stock — first come, first served.</p>
+        </div>
+        <div class="countdown" id="countdown">
+          <div class="cd-box"><span id="cdDays">00</span><small>Days</small></div>
+          <div class="cd-sep">:</div>
+          <div class="cd-box"><span id="cdHours">00</span><small>Hours</small></div>
+          <div class="cd-sep">:</div>
+          <div class="cd-box"><span id="cdMins">00</span><small>Mins</small></div>
+          <div class="cd-sep">:</div>
+          <div class="cd-box"><span id="cdSecs">00</span><small>Secs</small></div>
+        </div>
+        <a href="#" class="btn-primary">Shop The Sale <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY CHOOSE US ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow"><i class="fa-solid fa-shield-halved"></i> Why DTRX Figure</span>
+        <h2 class="section-title">Built For Real Collectors</h2>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature">
+          <div class="feature-icon"><i class="fa-solid fa-certificate"></i></div>
+          <h3>Authentic Figures</h3>
+          <p>100% officially licensed. Every figure ships with a certificate of authenticity.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon"><i class="fa-solid fa-box"></i></div>
+          <h3>Safe Packaging</h3>
+          <p>Double-boxed, foam-padded, and damage-proof. Your figures arrive flawless.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon"><i class="fa-solid fa-truck-fast"></i></div>
+          <h3>Fast Delivery</h3>
+          <p>Express worldwide shipping. Tracking included on every single order.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon"><i class="fa-solid fa-rotate-left"></i></div>
+          <h3>Easy Returns</h3>
+          <p>30-day no-hassle returns. If it's not perfect, send it back — no questions asked.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TRENDING NOW ===== -->
+<section class="trending-section">
+  <div class="container">
+    <h2 class="section-title">Trending Now</h2>
+
+    <div class="trending-grid">
+
+      <div class="tcg-card">
+        <img class="tcg-img" src="https://images.unsplash.com/photo-1608889175123-8ee362201f81?auto=format&fit=crop&w=700&q=80" alt="">
+        <div class="red-side"><span>Dead Pool</span></div>
+
+        <div class="corner-badge">
+          <div class="circle-icon">
+            <img src="https://imgs.search.brave.com/y9rF94GMMt441S6fY35eQYucwkzLSXsMuI6XwYJefvM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzBkLzVi/LzI5LzBkNWIyOWZh/ZGUwODRiYjg2MGNl/NjllYTc3ZGViNzI5/LmpwZw" alt="Deadpool Logo">
+          </div>
+        </div>
+
+        <div class="bottom-shape">
+          <div class="hex-icon"><i class="fa-solid fa-shield-cat"></i></div>
+        </div>
+
+        <div class="info-box">
+          <h3>₹15,999</h3>
+          <p>If each player has a <b>RONIN SAMURAI</b>, +2 power.</p>
+          <button class="add-to-cart-btn">Add To Cart</button>
+        </div>
+
+        <div class="bottom-bar">
+          <span class="tcg-brand">HEROIC</span>
+          <div class="tcg-mini-icons">
+            <i class="fa-solid fa-cube"></i>
+            <i class="fa-solid fa-bolt"></i>
+            <i class="fa-solid fa-crosshairs"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="tcg-card">
+        <img class="tcg-img" src="https://images.unsplash.com/photo-1608889175123-8ee362201f81?auto=format&fit=crop&w=700&q=80" alt="">
+        <div class="red-side"><span>IRON MECH ELITE</span></div>
+
+        <div class="corner-badge">
+          <div class="circle-icon blue"><i class="fa-solid fa-bolt"></i></div>
+        </div>
+
+        <div class="bottom-shape">
+          <div class="hex-icon pink"><i class="fa-solid fa-robot"></i></div>
+        </div>
+
+        <div class="info-box">
+          <h3>₹18,999</h3>
+          <p>Deploying this unit gives <b>+5 ARMOR</b> to all mechs.</p>
+          <button class="add-to-cart-btn">Add To Cart</button>
+        </div>
+
+        <div class="bottom-bar">
+          <span class="tcg-brand">HEROIC</span>
+          <div class="tcg-mini-icons">
+            <i class="fa-solid fa-cube"></i>
+            <i class="fa-solid fa-bolt"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="tcg-card">
+        <img class="tcg-img" src="https://images.unsplash.com/photo-1608889175123-8ee362201f81?auto=format&fit=crop&w=700&q=80" alt="">
+        <div class="red-side"><span>DARK LORD</span></div>
+
+        <div class="corner-badge">
+          <div class="circle-icon purple"><i class="fa-solid fa-meteor"></i></div>
+        </div>
+
+        <div class="bottom-shape">
+          <div class="hex-icon orange"><i class="fa-solid fa-jedi"></i></div>
+        </div>
+
+        <div class="info-box">
+          <h3>₹16,999</h3>
+          <p>Force choke your opponents. <b>Instant Win</b> on turn 5.</p>
+          <button class="add-to-cart-btn">Add To Cart</button>
+        </div>
+
+        <div class="bottom-bar">
+          <span class="tcg-brand">HEROIC</span>
+          <div class="tcg-mini-icons">
+            <i class="fa-solid fa-meteor"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="tcg-card">
+        <img class="tcg-img" src="https://images.unsplash.com/photo-1608889175123-8ee362201f81?auto=format&fit=crop&w=700&q=80" alt="">
+        <div class="red-side"><span>NINJA FIGHTER</span></div>
+
+        <div class="corner-badge">
+          <div class="circle-icon green"><i class="fa-solid fa-leaf"></i></div>
+        </div>
+
+        <div class="bottom-shape">
+          <div class="hex-icon sky"><i class="fa-solid fa-user-ninja"></i></div>
+        </div>
+
+        <div class="info-box">
+          <h3>₹12,999 <small>₹16,999</small></h3>
+          <p>Stealth attack deals <b>double damage</b> from shadows.</p>
+          <button class="add-to-cart-btn">Add To Cart</button>
+        </div>
+
+        <div class="bottom-bar">
+          <span class="tcg-brand">HEROIC</span>
+          <div class="tcg-mini-icons">
+            <i class="fa-solid fa-leaf"></i>
+            <i class="fa-solid fa-wind"></i>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- ===== STATISTICS ===== -->
+  <section class="statistics-section">
+    <div class="container">
+      <div class="statistics-grid">
+        <div class="stat-card">
+          <div class="stat-number">50K+</div>
+          <div class="stat-label">Happy Collectors</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">200+</div>
+          <div class="stat-label">Premium Figures</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">4.9★</div>
+          <div class="stat-label">Average Rating</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">99%</div>
+          <div class="stat-label">Authenticity</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow"><i class="fa-solid fa-quote-left"></i> Reviews</span>
+        <h2 class="section-title">Loved By Collectors Worldwide</h2>
+      </div>
+
+      <div class="testimonials">
+        <div class="testimonial">
+          <div class="rating">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p>"The packaging alone is worth the price. My Cyber Samurai figure is absolutely stunning — feels like a museum piece."</p>
+          <div class="t-author">
+            <div class="t-avatar">JK</div>
+            <div>
+              <strong>Jake K.</strong>
+              <span>Verified Collector</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial">
+          <div class="rating">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p>"Fastest shipping I've ever experienced for a collector site. Authentic, mint condition, and beautifully detailed."</p>
+          <div class="t-author">
+            <div class="t-avatar">MS</div>
+            <div>
+              <strong>Mia S.</strong>
+              <span>Verified Collector</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial">
+          <div class="rating">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p>"DTRX Figure has become my go-to. The Limited Edition drops are insane — quality is next level. 10/10 every time."</p>
+          <div class="t-author">
+            <div class="t-avatar">RD</div>
+            <div>
+              <strong>Ryan D.</strong>
+              <span>Verified Collector</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NEWSLETTER ===== -->
+  <section class="newsletter">
+    <div class="container">
+      <div class="newsletter-inner">
+        <span class="eyebrow"><i class="fa-solid fa-envelope"></i> Join The Drop List</span>
+        <h2>Get Early Access to New Drops</h2>
+        <p>Be the first to know about exclusive drops, restocks & 10% off your first order.</p>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); this.querySelector('button').innerHTML='<i class=\'fa-solid fa-check\'></i> Subscribed';">
+          <input type="email" placeholder="Enter your email" required />
+          <button type="submit"><i class="fa-solid fa-paper-plane"></i> Subscribe</button>
+        </form>
+        <small>No spam. Unsubscribe anytime.</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-brand">
+          <a href="#" class="logo">
+            <span class="logo-mark">D</span>
+            <span class="logo-text">DTRX<span class="dot">.</span></span>
+          </a>
+          <p>Premium futuristic action figures & collectibles. Built for true fans, by true fans.</p>
+          <div class="social-row">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-discord"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <a href="#">New Drops</a>
+          <a href="#">Anime</a>
+          <a href="#">Superhero</a>
+          <a href="#">Gaming</a>
+          <a href="#">Mecha & Robots</a>
+          <a href="#">Limited Editions</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Support</h4>
+          <a href="#">Contact Us</a>
+          <a href="#">Shipping Info</a>
+          <a href="#">Returns</a>
+          <a href="#">FAQ</a>
+          <a href="#">Track Order</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="#">About Us</a>
+          <a href="#">Authenticity</a>
+          <a href="#">Affiliate Program</a>
+          <a href="#">Blog</a>
+          <a href="#">Careers</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 DTRX Figure — All Rights Reserved.</p>
+        <div class="payment-icons">
+          <i class="fa-brands fa-cc-visa"></i>
+          <i class="fa-brands fa-cc-mastercard"></i>
+          <i class="fa-brands fa-cc-amex"></i>
+          <i class="fa-brands fa-cc-paypal"></i>
+          <i class="fa-brands fa-cc-apple-pay"></i>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== TOAST ===== -->
+  <div class="toast" id="toast">
+    <i class="fa-solid fa-check-circle"></i>
+    <span id="toastMsg">Added to cart!</span>
+  </div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const section = document.querySelector(".premium-zoom-section");
+  const card = document.querySelector(".premium-zoom-card");
+
+  if (!section || !card) {
+    console.log("Zoom section not found");
+    return;
+  }
+
+  function clamp(value, min, max) {
+    return Math.min(Math.max(value, min), max);
+  }
+
+  function lerp(start, end, progress) {
+    return start + (end - start) * progress;
+  }
+
+  function smoothStep(t) {
+    return t * t * (3 - 2 * t);
+  }
+
+  function animateZoom() {
+    const rect = section.getBoundingClientRect();
+    const scrollable = section.offsetHeight - window.innerHeight;
+
+    let progress = clamp(-rect.top / scrollable, 0, 1);
+    let ease = smoothStep(progress);
+
+    card.style.width = lerp(40, window.innerWidth, ease) + "px";
+    card.style.height = lerp(40, window.innerHeight, ease) + "px";
+    card.style.borderRadius = lerp(40, 0, ease) + "px";
+    card.style.opacity = lerp(0.15, 1, ease);
+    card.style.transform = `scale(${lerp(0.2, 1, ease)})`;
+  }
+
+  window.addEventListener("scroll", animateZoom, { passive: true });
+  window.addEventListener("resize", animateZoom);
+  animateZoom();
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const buttons = document.querySelectorAll(".add-to-cart-btn");
+
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", function () {
+      if (this.classList.contains("added")) return;
+
+      const oldText = this.innerHTML;
+      this.classList.add("added");
+      this.innerHTML = "ADDING...";
+
+      setTimeout(() => {
+        this.innerHTML = "ADDED";
+        this.style.background = "#e60000";
+
+        setTimeout(() => {
+          this.innerHTML = oldText;
+          this.style.background = "";
+          this.classList.remove("added");
+        }, 1400);
+      }, 600);
+    });
+  });
+});
+</script>
+</body>
+</html>
